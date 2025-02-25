@@ -15,8 +15,8 @@ import {
 } from "@/components/ui/sidebar"
 
 import {CardWithForm} from '@/components/cardwithform';
-import {TableDemo} from '@/components/customtable';
-import { ThemeProvider } from "next-themes"
+import { TableDemo } from '@/components/customtable';
+import { ModeToggle } from "@/components/modetoggle";
 
 export default function Page() {
   return (
@@ -39,12 +39,9 @@ export default function Page() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          />
+          <div className="ml-auto">
+            <ModeToggle />
+          </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">

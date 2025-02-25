@@ -24,17 +24,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-
-  function togSideBar(params:type) {
-    
-  }
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      {children}
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
       </body>
     </html>
   );
